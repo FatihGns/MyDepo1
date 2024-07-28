@@ -1,0 +1,140 @@
+/* Add your custom fonts */
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Fraunces:opsz,wght@9..144,100..900&family=Inter:wght@100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Orbitron:wght@400..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:wght@100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Orbitron:wght@400..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+:root {
+  --primary-color: hsl(158, 36%, 37%);
+  --secondary-color: hsl(30, 38%, 92%);
+  --dark-grayish-blue: hsl(228, 12%, 48%);
+  --very-dark-blue: hsl(212, 21%, 14%);
+  --white: hsl(0, 0%, 100%);
+  --font-primary: 'Figtree', sans-serif;
+}
+
+body {
+  font-family: var(--font-primary);
+  background-color: var(--secondary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.card {
+  background-color: var(--white);
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  max-width: 600px;
+  margin: 20px;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.product-type {
+  font-size: 0.9rem;
+  color: var(--dark-grayish-blue);
+  text-transform: uppercase;
+  letter-spacing: 5px;
+
+}
+
+.product-name {
+  font-size: 1.5rem;
+  font-family: "Fraunces", serif;
+  margin: 10px 0;
+  color: var(--very-dark-blue);
+}
+
+.product-descpriton{
+  font-size: 1rem;
+  opacity: 0.8;
+  line-height: 1.5;
+  color: var(--dark-grayish-blue);
+  margin-bottom: 20px;
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.current-price {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  font-weight: 600;
+  margin-right: 10px;
+  font-size: 1.5rem;
+  font-family: "Fraunces", serif;
+}
+
+.original-price {
+  font-size: 0.9rem;
+  color: var(--dark-grayish-blue);
+  text-decoration: line-through;
+}
+
+.add-to-card {
+  background-color: var(--primary-color);
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--white);
+  border: none;
+  padding: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  width: 100%;
+  justify-content: center;
+
+}
+
+.add-to-cart img {
+  margin-right: 10px;
+}
+
+/* Media queries for responsiveness */
+@media (min-width: 600px) {
+  .card {
+    flex-direction: row;
+  }
+
+  .card-image, .card-content {
+    flex: 1;
+  }
+  
+  .card-content {
+    padding: 40px;
+  }
+
+  .product-name {
+    font-size: 2rem;
+  }
+
+  .product-description {
+    font-size: 1rem;
+  }
+
+  .current-price {
+    font-size: 2rem;
+  }
+
+  .add-to-cart {
+    padding: 15px 30px;
+    font-size: 1.1rem;
+  }
+}
